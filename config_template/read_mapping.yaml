@@ -1,0 +1,33 @@
+genome: "/home/panyq/repos/index-scripts/os/rap-db/results/genome/os.rap-db.genome.fa"
+
+
+read_mapping_jobs:
+  paired:  # results/read_mapping/paired/{name}.bam
+    sample1:
+      r1: path/to/sample1.r1.fq.gz
+      r2: path/to/sample1.r2.fq.gz
+    sample2:
+      r1: path/to/sample2.r1.fq.gz
+      r2: path/to/sample2.r2.fq.gz
+    sample3:
+      r1: path/to/sample3.r1.fq.gz
+      r2: path/to/sample3.r2.fq.gz
+
+
+fastp:
+  skip: false  # if set to ture, fastp filtering steps will be skipped.
+
+
+bwa:
+  threads: 20
+
+
+samtools:
+  sort:
+    threads: 20
+    mem_per_thread: "2G"
+
+
+bam_filters:  # results/read_mapping/{seq_mode}/{name}.filter-{filter}.bam"
+  default: "-F 1284"  # 1284 stands for "unmapped", "not primary mapped" and "is PCR or optical duplicate"
+

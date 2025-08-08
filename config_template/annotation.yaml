@@ -1,0 +1,10 @@
+gtf: "/home/panyq/repos/index-scripts/os/rap-db/results/gtf/os.rap-db.make.gtf"
+
+
+bcftools:
+  filters:
+    default: "QUAL <= 100 | INFO/DP > 500 | INFO/DP < 10"
+
+
+vep:
+  fields: "IMPACT,Consequence,Gene,EXON,INTRON,CDS_position,Protein_position,Amino_acids,Codons,DISTANCE"

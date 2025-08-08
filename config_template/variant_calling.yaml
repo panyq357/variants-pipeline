@@ -1,0 +1,6 @@
+
+variant_calling_jobs:
+  all-samples:
+    - results/read_mapping/paired/sample1.bam
+    - results/read_mapping/paired/sample2.bam
+    - results/read_mapping/paired/sample3.bam

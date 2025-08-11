@@ -5,4 +5,4 @@ results/*
 logs/*
 workflow/Snakefile
 **/.RData
-
+**/STDOUT_warnings.txt

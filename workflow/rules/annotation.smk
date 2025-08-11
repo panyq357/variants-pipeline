@@ -7,6 +7,8 @@ rule filter_vcf:
         filter_expression = lambda w: config["bcftools"]["filters"][w.filter]
     log:
         "{prefix}.filter-{filter}.vcf.gz.log"
+    wildcard_constraints:
+        filter = "[^.]+"
     shell:
         '''
         bcftools view -e {params.filter_expression:q} {input} 2> {log} \
